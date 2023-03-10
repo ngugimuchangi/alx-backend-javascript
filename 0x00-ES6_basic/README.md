@@ -10,7 +10,7 @@
     - Object creation adn their properties
     - Iterators and for-of loops
 ## Tasks
-0. ### Const or Let:
+### 0. Const or Let:
 - Modify
     - function `taskFirst` to instantiate variables using - `const`
     - function `taskNext` to instantiate variables using `let`
@@ -33,7 +33,7 @@ export function taskNext() {
 ```
 - File: [0-constants.js](0-constants.js)
 
-1. ### Block Scope
+### 1. Block Scope
 Modify the variables inside the function `taskBlock` so that the variables aren’t overwritten inside the conditional block.
 ```
 export default function taskBlock(trueOrFalse) {
@@ -50,7 +50,7 @@ export default function taskBlock(trueOrFalse) {
 ```
 - File: [1-block-scoped.js](1-block-scoped.js)
 
-2. ### Arrow functions
+### 2. Arrow functions
 - Rewrite the following standard function to use ES6’s arrow syntax of the function add
 ```
 export default function getNeighborhoodsList() {
@@ -65,7 +65,7 @@ export default function getNeighborhoodsList() {
 ```
 - File: [2-arrow.js](2-arrow.js)
 
-3. ### Parameter defaults
+### 3. Parameter defauls
 - Condense the internals of the following function to 1 line - without changing the name of each function/variable. 
 ```
 export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
@@ -81,7 +81,7 @@ export default function getSumOfHoods(initialNumber, expansion1989, expansion201
 ```
 - File:[3-default-parameter.js](3-default-parameter.js)
 
-4. ### Rest parameter syntax for functions 
+### 4. Rest parameter syntax for functions 
 - Modify the following function to return the number of arguments passed to it using the rest parameter syntax
 ```
 export default function returnHowManyArguments() {
@@ -90,7 +90,7 @@ export default function returnHowManyArguments() {
 ```
 - File: [4-rest-parameter.js](4-rest-parameter.js)
 
-5. ### Spread syntax
+### 5. Spread syntax
 - Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below. Your function body should be one line long.
 ```
 export default function concatArrays(array1, array2, string) {
@@ -99,7 +99,7 @@ export default function concatArrays(array1, array2, string) {
 - File: [5-spread-operator.js](5-spread-operator.js)
 
 
-6. ### Template string literals
+### 6. Template string literals
 - Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined.
 ```
 export default function getSanFranciscoDescription() {
@@ -117,7 +117,7 @@ export default function getSanFranciscoDescription() {
 ```
 - File: [6-string-interpolation.js](6-string-interpolation.js)
 
-7. ### Object property value shorthand syntax
+### 7. Object property value shorthand syntax
 - Modify the following function’s `budget` object to simply use the keyname instead.
 ```
 export default function getBudgetObject(income, gdp, capita) {
@@ -152,7 +152,7 @@ export default function getBudgetForCurrentYear(income, gdp, capita) {
 ```
 - File: [8-getBudgetCurrentYear.js](8-getBudgetCurrentYear.js)
 
-9. ### ES6 method properties
+### 9. ES6 method properties
 - Rewrite `getFullBudgetObject` to use ES6 method properties in the `fullBudget` object
 ````
 import getBudgetObject from './7-getBudgetObject.js';
@@ -174,7 +174,7 @@ export default function getFullBudgetObject(income, gdp, capita) {
 ````
 - File: [9-getFullBudget.js](9-getFullBudget.js)
 
-10. ### For...of Loops
+### 10. For...of Loops
 - Rewrite the function `appendToEachArrayValue` to use ES6’s `for...of` operator.
 ```
 export default function appendToEachArrayValue(array, appendString) {
@@ -188,7 +188,7 @@ export default function appendToEachArrayValue(array, appendString) {
 ```
 - File: [10-loops.js](10-loops.js)
 
-11. ### Iterator
+### 11. Iterator
 - Write a function named `createEmployeesObject` that will receive two arguments:
     - `departmentName` (String)
     - `employees` (Array of Strings)
@@ -207,7 +207,7 @@ export default function createEmployeesObject(departmentName, employees) {
 ```
 - File: [11-createEmployeesObject.js](11-createEmployeesObject.js)
 
-12. ### Report object
+### 12. Report object
 - Write a function named `createReportObject` whose parameter, `employeesList`, is the return value of the previous function `createEmployeesObject`.
 ```
 export default function createReportObject(employeesList) {
@@ -231,7 +231,7 @@ export default function createReportObject(employeesList) {
 ```
 - File: [12-createReportObject.js](12-createReportObject.js)
 
-13. ### Iterating through report objects
+### 13. Iterating through report objects
 - Write a function named `createIteratorObject`, that will take into argument a report Object created with the previous function `createReportObject`.
 
 - This function will return an iterator to go through every employee in every department.
@@ -242,7 +242,7 @@ export default function createIteratorObject(report) {
 ```
 - File: [100-createIteratorObject.js](100-createIteratorObject.js)
 
-14. ### Iterate through object
+### 14. Iterate through object
 - Write a function named `iterateThroughObject`. The function’s parameter `reportWithIterator` is the return value from `createIteratorObject`.
 ```
 export default function iterateThroughObject(reportWithIterator) {
