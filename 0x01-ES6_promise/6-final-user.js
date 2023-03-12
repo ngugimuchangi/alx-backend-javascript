@@ -15,5 +15,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         status: photo.status,
         value: photo.value,
       },
-    ]);
+    ])
+    .catch((error) => error);
 }
