@@ -6,6 +6,15 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ])
-    .then(([user, photo]) => [user, photo])
+    .then(([user, photo]) => [
+      {
+        status: user.status,
+        value: user.value,
+      },
+      {
+        status: photo.status,
+        value: `Error: ${photo.reason.message}`
+      }
+    ])
     .catch((err) => err);
 }
