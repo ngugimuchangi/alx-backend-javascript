@@ -13,8 +13,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       },
       {
         status: photo.status,
-        value: `Error: ${photo.reason.message}`
-      }
+        value: `Error: ${photo.reason.message}`,
+      },
     ])
     .catch((err) => err);
 }
