@@ -6,9 +6,9 @@
 export default class HolbertonCourse {
   /**
    * Create a HolbertonCourse
-   * @param {String}  name      The name of the class
-   * @param {Number}  length    The duration of the class
-   * @param {Array}   students  Name of students in the class
+   * @param {String}  name     - The name of the class
+   * @param {Number}  length   - The duration of the class
+   * @param {Array}   students - Name of students in the class
    */
   constructor(name, length, students) {
     this.name = name;
@@ -18,7 +18,7 @@ export default class HolbertonCourse {
 
   /**
    * Set value for _name
-   * @param name {String} New course name
+   * @param {String} name - New course name
    */
   set name(name) {
     if (typeof name !== 'string') throw TypeError('Name must be a string');
@@ -27,7 +27,7 @@ export default class HolbertonCourse {
 
   /**
    * Set value for _length
-   * @param {Number} length New course length value
+   * @param {Number} length - New course length value
    */
   set length(length) {
     if (typeof length !== 'number') throw TypeError('Length must be a number');
@@ -36,7 +36,7 @@ export default class HolbertonCourse {
 
   /**
    * Set students value
-   * @param {Array} students New value of students
+   * @param {Array} students - New value of students
    */
   set students(students) {
     if (!Array.isArray(students)) {
@@ -50,7 +50,7 @@ export default class HolbertonCourse {
 
   /**
    * Get course name
-   * @returns {String} The value of _name
+   * @returns {String} - The value of _name
    */
   get name() {
     return this._name;
@@ -58,7 +58,7 @@ export default class HolbertonCourse {
 
   /**
    * Get course length
-   * @returns {Number} The value of _length
+   * @returns {Number} - The value of _length
    */
   get length() {
     return this._length;
@@ -66,7 +66,7 @@ export default class HolbertonCourse {
 
   /**
    * Get value of _students
-   * @return {Array} The value of _students
+   * @return {Array} - The value of _students
    */
   get students() {
     return this._students;
