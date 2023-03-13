@@ -1,9 +1,11 @@
 /* eslint no-underscore-dangle: 0 */ // ---> OFF
 
-/* Represents Building object */
+/**
+ * Abstract class
+ * Represents Building object */
 export default class Building {
   /**
-   *
+   * Creates new Building object
    * @param {Number} sqft - Building's size.
    */
   constructor(sqft) {
@@ -28,7 +30,7 @@ export default class Building {
    */
   set sqft(size) {
     if (typeof size !== 'number') {
-      throw new TypeError('Size must be a number.');
+      throw new TypeError('size must be a number.');
     }
     this._sqft = size;
   }
