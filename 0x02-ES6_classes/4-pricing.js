@@ -59,13 +59,13 @@ export default class Pricing {
    * @returns - Price object in the format'amount currency_name (currency_code)'.
    */
   displayFullPrice() {
-    return `${this.amount} ${this.currency.name} (${this.currency.code})`
+    return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
   /**
-   * 
-   * @param {Number} amount 
-   * @param {Number} conversionRate 
+   *
+   * @param {Number} amount
+   * @param {Number} conversionRate
    * @returns {Number} - Converted amount.
    */
 
