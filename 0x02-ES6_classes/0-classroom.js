@@ -1,4 +1,4 @@
-export default class classRoom {
+export default class ClassRoom {
   /**
    * class constructor
    * @param {Number} maxStudentsSize
