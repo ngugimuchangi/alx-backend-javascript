@@ -13,7 +13,7 @@ export default class Currency {
 
   /**
    * Get currency code.
-   * @return {String} - The value of _code.
+   * @returns {String} - The value of _code.
    */
   get code() {
     return this._code;
@@ -21,7 +21,7 @@ export default class Currency {
 
   /**
    * Get currency's name.
-   * @return {String} - The value of _name.
+   * @returns {String} - The value of _name.
    */
   get name() {
     return this._name;
@@ -32,7 +32,9 @@ export default class Currency {
    * @param {String} code - New value for _code.
    */
   set code(code) {
-    if (typeof code !== 'string') throw new TypeError('Code must be a string');
+    if (typeof code !== 'string') {
+      throw new TypeError('Code must be a string');
+    }
     this._code = code;
   }
 
@@ -41,13 +43,15 @@ export default class Currency {
    * @param {String} name - New value for _name.
    */
   set name(name) {
-    if (typeof name !== 'string') throw new TypeError('Name must be a string');
+    if (typeof name !== 'string') {
+      throw new TypeError('Name must be a string');
+    }
     this._name = name;
   }
 
   /**
    * Display full currency details
-   * @return {String} - Concatenated string of currency's_name and _code values
+   * @returns {String} - Concatenated string of currency's_name and _code values
    */
   displayFullCurrency() {
     return `${this.name} (${this.code})`;
