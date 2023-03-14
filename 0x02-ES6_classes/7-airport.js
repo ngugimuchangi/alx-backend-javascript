@@ -17,6 +17,6 @@ export default class Airport {
    * @returns {String} - airport instance's code.
    */
   get [Symbol.toStringTag]() {
-    return this.code;
+    return this._code;
   }
 }
