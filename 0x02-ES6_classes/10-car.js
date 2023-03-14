@@ -13,7 +13,16 @@ export default class Car {
     this._color = color;
   }
 
+  /**
+   * Creates new Car instance using constructor
+   * defined by @@species
+   */
   cloneCar() {
     return new this.constructor[Symbol.species]();
+  }
+
+  /* Getter for @@species static property */
+  static get [Symbol.Species]() {
+    return this;
   }
 }
