@@ -13,19 +13,11 @@ export default class Building {
       && new.target.prototype.evacuationWarningMessage === undefined) {
       throw new Error('Class extending Building must override evacuationWarningMessage');
     }
-    this.sqft = sqft;
+    this._sqft = sqft;
   }
 
   /* Getter */
   get sqft() {
     return this._sqft;
-  }
-
-  /* Setter */
-  set sqft(size) {
-    if (typeof size !== 'number') {
-      throw new TypeError('size must be a number.');
-    }
-    this._sqft = size;
   }
 }

@@ -8,32 +8,8 @@ export default class Airport {
    * @param {String} code - airport's code.
    */
   constructor(name, code) {
-    this.name = name;
-    this.code = code;
-  }
-
-  /** Getters */
-  get name() {
-    return this.__name;
-  }
-
-  get code() {
-    return this._code;
-  }
-
-  /* Setters */
-  set name(airportName) {
-    if (typeof airportName !== 'string') {
-      throw new TypeError('name must be a string.');
-    }
-    this._name = airportName;
-  }
-
-  set code(airportCode) {
-    if (typeof airportCode !== 'string') {
-      throw new TypeError('code must be a string.');
-    }
-    this._code = airportCode;
+    this._name = name;
+    this._code = code;
   }
 
   /**

@@ -8,44 +8,12 @@ export default class HolbertonClass {
    * @param {String} location - class location.
    */
   constructor(size, location) {
-    this.size = size;
-    this.location = location;
-  }
-
-  /* Getters */
-  get size() {
-    return this._size;
-  }
-
-  /**
-   * Gets class location
-   * @returns {String} - value of _location.
-   */
-  get location() {
-    return this._location;
-  }
-
-  /* Setters */
-  set size(classSize) {
-    if (typeof classSize !== 'number') {
-      throw new TypeError('size must be a number.');
-    }
-    this._size = classSize;
-  }
-
-  /**
-   * Sets location size
-   * @param {String} classLocation - class location
-   */
-  set location(classLocation) {
-    if (typeof classLocation !== 'string') {
-      throw new TypeError('location must be a string.');
-    }
-    this._location = classLocation;
+    this._size = size;
+    this._location = location;
   }
 
   [Symbol.toPrimitive](primitive) {
     if (primitive === 'number') return this.size;
-    return this.location;
+    return this._location;
   }
 }
