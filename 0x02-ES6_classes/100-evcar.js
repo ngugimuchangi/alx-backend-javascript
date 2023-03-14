@@ -4,7 +4,7 @@ import Car from './10-car';
 /* Represents EVCar object */
 export default class EVCar extends Car {
   /**
-   * Creates new instance of EVCar
+   * Creates new EVCar instance.
    * @param {Brand} brand - Car's brand
    * @param {Motor} motor - Car's motor type
    * @param {Color} color - Car's color
