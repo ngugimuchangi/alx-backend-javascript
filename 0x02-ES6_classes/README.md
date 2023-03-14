@@ -24,7 +24,7 @@
     - Implements a instance method `displayFullCurrency`
     - File: [3-currency.js](3-currency.js)
 
-4. `Pricing` class declaration.
+4. `Pricing` class declaration
     - Extends ``Currency` from [3-currency.js](3-currency.js)
     - Implements getter and setter methods for its attributes
     - Implements static method `convertPrice`
@@ -41,11 +41,11 @@
     - Overrides `evacuationWarningMessage` method
     - File: [6-sky_high.js](6-sky_high.js)
 
-7. `Airport` class
+7. `Airport` class declaration
     - Overrides `Symbol.toStringTag` property
     - File: [7-airport.js](7-airport.js)
 
-8. `HolbertonClass` class
+8. `HolbertonClass` class declaration
     - Implements `Symbol.toPrimitive` method
     - File: [8-hbtn_class.js](8-hbtn_class.js)
 
@@ -55,12 +55,12 @@
     - Exporting variable declaration and values
     - File: [9-hoisting.js](9-hoisting.js)
 
-10. `Car` class
+10. `Car` class declaration
     - Implements getter for `Symbol.species` property.
     - Implements `cloneCar` method.
     - File: [10-car.js](10-car.js)
 
-11. `EVCar` class
+11. `EVCar` class declaration
     - Extends `Car` class from [10-car.js](10-car.js)
     - Overrides `Symbol.species to utilize parents constructor method.
     - File: [100-evcar.js](100-evcar.js)
