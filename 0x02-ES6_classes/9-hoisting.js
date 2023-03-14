@@ -1,7 +1,10 @@
 /* eslint no-underscore-dangle: 0 */ // ---> OFF
 /* eslint max-classes-per-file: 0 */ // ---> OFF
 
-/* Fixing class hoisting. Classes must be be declared before they are use */
+/**
+ * Fixing class hoisting.
+ * Classes must be be declared before they are used
+ */
 
 export class HolbertonClass {
   constructor(year, location) {
