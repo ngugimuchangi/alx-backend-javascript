@@ -62,5 +62,5 @@
 
 11. `EVCar` class declaration
     - Extends `Car` class from [10-car.js](10-car.js)
-    - Overrides `Symbol.species to utilize parents constructor method.
+    - Overrides `Symbol.species` to utilize parents constructor method.
     - File: [100-evcar.js](100-evcar.js)
