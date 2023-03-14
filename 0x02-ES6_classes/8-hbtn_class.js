@@ -12,8 +12,13 @@ export default class HolbertonClass {
     this._location = location;
   }
 
+  /**
+   *
+   * @param {String} primitive - primitive type
+   * @returns
+   */
   [Symbol.toPrimitive](primitive) {
-    if (primitive === 'number') return this.size;
+    if (primitive === 'number') return this._size;
     return this._location;
   }
 }
