@@ -2,7 +2,7 @@
 /* Currency class */
 export default class Currency {
   /**
-   * Constructor method.
+   * Creates new instance of Currency.
    * @param {String} code - Currency code.
    * @param {String} name - Currency name.
    */
@@ -11,26 +11,16 @@ export default class Currency {
     this.name = name;
   }
 
-  /**
-   * Get currency code.
-   * @returns {String} - The value of _code.
-   */
+  /* Getters */
   get code() {
     return this._code;
   }
 
-  /**
-   * Get currency's name.
-   * @returns {String} - The value of _name.
-   */
   get name() {
     return this._name;
   }
 
-  /**
-   * Set currency' code
-   * @param {String} code - New value for _code.
-   */
+  /* Setters */
   set code(code) {
     if (typeof code !== 'string') {
       throw new TypeError('Code must be a string');

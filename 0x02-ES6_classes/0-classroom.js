@@ -1,6 +1,7 @@
+/* Represents ClassRoom object */
 export default class ClassRoom {
   /**
-   * class constructor
+   * Creates new ClassRoom Instance
    * @param {Number} maxStudentsSize
    */
   constructor(maxStudentsSize) {

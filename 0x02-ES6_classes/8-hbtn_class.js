@@ -12,10 +12,7 @@ export default class HolbertonClass {
     this.location = location;
   }
 
-  /**
-   * Gets class size
-   * @returns {Number} - value of _size.
-   */
+  /* Getters */
   get size() {
     return this._size;
   }
@@ -28,10 +25,7 @@ export default class HolbertonClass {
     return this._location;
   }
 
-  /**
-   * Sets class size
-   * @param {Number} classSize - class size.
-   */
+  /* Setters */
   set size(classSize) {
     if (typeof classSize !== 'number') {
       throw new TypeError('size must be a number.');

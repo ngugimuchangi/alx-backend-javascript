@@ -2,31 +2,26 @@
 
 /* Represents Airport object */
 export default class Airport {
+  /**
+   * Creates new instance of Airport.
+   * @param {String} name - airport's name.
+   * @param {String} code - airport's code.
+   */
   constructor(name, code) {
     this.name = name;
     this.code = code;
   }
 
-  /**
-   * Get airport's name.
-   * @returns {String} - airport's name.
-   */
+  /** Getters */
   get name() {
     return this.__name;
   }
 
-  /**
-   * Gets airport's code.
-   * @returns {String} - airports code.
-   */
   get code() {
     return this._code;
   }
 
-  /**
-   * Set value for _name.
-   * @param {String} airportName - airport's name.
-   */
+  /* Setters */
   set name(airportName) {
     if (typeof airportName !== 'string') {
       throw new TypeError('name must be a string.');
@@ -34,10 +29,6 @@ export default class Airport {
     this._name = airportName;
   }
 
-  /**
-   * Set value for _code.
-   * @param {String} airportCode - airport's code.
-   */
   set code(airportCode) {
     if (typeof airportCode !== 'string') {
       throw new TypeError('code must be a string.');

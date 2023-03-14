@@ -7,7 +7,7 @@ import Building from './5-building';
  */
 export default class SkyHighBuilding extends Building {
   /**
-   * Creates new SkyHighBuilding object.
+   * Creates new  instance of SkyHighBuilding.
    * @param {Number} sqft - Building's size in sqft.
    * @param {Number} floor - Number of floors in the building.
    */
@@ -16,18 +16,12 @@ export default class SkyHighBuilding extends Building {
     this.floors = floors;
   }
 
-  /**
-   * Get floors
-   * @returns {Number} - The value of _floors.
-   */
+  /* Get floors */
   get floors() {
     return this._floors;
   }
 
-  /**
-   * Set floors
-   * @param {Number} numOfFloors - The new value of _floors
-   */
+  /* Set floors */
   set floors(numOfFloors) {
     if (typeof numOfFloors !== 'number') {
       throw new TypeError('floors must be a number.');
@@ -35,6 +29,10 @@ export default class SkyHighBuilding extends Building {
     this._floors = numOfFloors;
   }
 
+  /**
+   * Creates evacuation message
+   * @returns {String} - Evacuation message
+   */
   evacuationWarningMessage() {
     return `Evacuate slowly the ${this.floors} floors`;
   }

@@ -5,7 +5,7 @@
  * Represents Building object */
 export default class Building {
   /**
-   * Creates new Building object
+   * Creates new instance of Building.
    * @param {Number} sqft - Building's size.
    */
   constructor(sqft) {
@@ -16,18 +16,12 @@ export default class Building {
     this.sqft = sqft;
   }
 
-  /**
-   * Get building's size
-   * @returns {Number} - The value of _sqft.
-   */
+  /* Getter */
   get sqft() {
     return this._sqft;
   }
 
-  /**
-   * Set sqft
-   * @param {Number} size - Build's size.
-   */
+  /* Setter */
   set sqft(size) {
     if (typeof size !== 'number') {
       throw new TypeError('size must be a number.');

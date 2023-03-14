@@ -4,7 +4,7 @@ import Currency from './3-currency';
 /* Represents Price object */
 export default class Pricing {
   /**
-   * Class constructor
+   * Creates new instance of Pricing.
    * @param {Number}    amount    - Cost of product.
    * @param {Currency}  currency  - Currency object.
    */
@@ -13,26 +13,16 @@ export default class Pricing {
     this.currency = currency;
   }
 
-  /**
-   * Get amount
-   * @returns {Number} - The value of _amount.
-   */
+  /* Getters */
   get amount() {
     return this._amount;
   }
 
-  /**
-   * Get currency
-   * @returns {Currency} - The value of _currency.
-   */
   get currency() {
     return this._currency;
   }
 
-  /**
-   * Set amount
-   * @param {Number} amount - New value for _amount.
-   */
+  /* Setters */
   set amount(amount) {
     if (typeof amount !== 'number') {
       throw new TypeError('Amount must be a number.');
@@ -43,10 +33,6 @@ export default class Pricing {
     this._amount = amount;
   }
 
-  /**
-   * Set currency
-   * @param {Currency} priceCurrency - New value for _currency.
-   */
   set currency(priceCurrency) {
     if (!(priceCurrency instanceof Currency)) {
       throw new TypeError('Currency must be an instance of Currency class.');
