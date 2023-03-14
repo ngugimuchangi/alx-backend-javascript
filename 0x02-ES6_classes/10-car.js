@@ -22,7 +22,7 @@ export default class Car {
   }
 
   /* Getter for @@species static property */
-  static get [Symbol.Species]() {
+  static get [Symbol.species]() {
     return this;
   }
 }
