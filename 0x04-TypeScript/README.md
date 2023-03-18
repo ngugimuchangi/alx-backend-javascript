@@ -2,7 +2,7 @@
 
 ## About
 - Basic types in Typescript
-- Interfaces, Classes, functions
+- Interfaces, classes, functions
 - Working with DOM and Typescript
 - Generic types
 - Using namespaces
