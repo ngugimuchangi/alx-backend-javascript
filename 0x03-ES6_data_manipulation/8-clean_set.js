@@ -5,7 +5,7 @@
  * @returns {String}
  */
 export default function cleanSet(set, startString) {
-  if (startString === '') return startString;
+  if (startString === '' || typeof startString !== 'string') return startString;
   const stringsArray = [];
   for (const element of set.values()) {
     if (element.startsWith(startString)) {
