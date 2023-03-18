@@ -41,7 +41,7 @@
 
 11. WeakMap data structure 
     - const `weakMap` - a new instance of a `WeakMap`
-    - `queryAPI` function that accept an `endpoint` argument like:
+    - Function `queryAPI` that accept an `endpoint` argument like:
 
     ```
     {
@@ -49,7 +49,6 @@
         name: 'getUsers',
     }
     ```
-
     - Tracks within the `weakMap` the number of times `queryAPI` is called for each `endpoint`.
 
     - When the number of queries is >= 5 throw an error with the message `Endpoint load is high`.
