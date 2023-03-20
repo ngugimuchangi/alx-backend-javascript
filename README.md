@@ -7,6 +7,9 @@
     - Classes
     - Data manipulation
     - Typescript
+    - Node JS
+    - Express JS
+    - Unit testing
 
 ## Projects
 - #### [0x00-ES6_basic](0x00-ES6_basic)
