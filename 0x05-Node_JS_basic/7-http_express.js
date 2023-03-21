@@ -17,7 +17,8 @@ app.get('/students', (req, res) => {
   fs.readFile(db, 'utf-8', (error, data) => {
     const body = ['This is the list of our students'];
     if (error) {
-      res.send(body[0]);
+      body.push('Cannot load the database')
+      res.send(body.join('\n'));
     } else {
       let students = data.split('\n');
       students = students.slice(1, students.length - 1);
