@@ -33,7 +33,7 @@ const app = http.createServer((req, resp) => {
         });
 
         // Organize data in an array
-        const body = [`Number of students: ${students.length}`];
+        const body = ['This is the list of our students', `Number of students: ${students.length}`];
         courses.forEach((courseData, course) => {
           body.push(`Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`);
         });
