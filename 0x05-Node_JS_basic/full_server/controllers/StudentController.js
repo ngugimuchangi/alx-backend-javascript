@@ -1,8 +1,7 @@
 import readDatabase from '../utils';
 
 /**
- * Student controller class that returns response with
- * students names per course
+ * Student controller class
  */
 export default class StudentController {
   /**
@@ -32,7 +31,7 @@ export default class StudentController {
   }
 
   /**
-   * Searches for students by major defined in request query string
+   * Searches for students by major defined in request parameters
    * and sets them on the response object
    * @param {*} request  - request object
    * @param {*} response - response object.
