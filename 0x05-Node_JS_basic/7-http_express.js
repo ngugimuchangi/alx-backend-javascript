@@ -13,13 +13,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  let body = '';
   const db = process.argv[2] === undefined ? '' : process.argv[2];
   fs.readFile(db, 'utf-8', (error, data) => {
+    const body = ['This is the list of our students'];
     if (error) {
-      res.send();
+      res.send(body[0]);
     } else {
-      body = ['This is the list of our students'];
       let students = data.split('\n');
       students = students.slice(1, students.length - 1);
       const courses = new Map();
