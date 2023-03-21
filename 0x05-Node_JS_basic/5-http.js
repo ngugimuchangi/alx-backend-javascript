@@ -5,8 +5,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const db = process.argv[2] === undefined ? '' : process.argv[2];
-
+const db = process.argv[2] === undefined ? 'database.csv' : process.argv[2];
 const host = '127.0.0.1';
 const port = 1245;
 const app = http.createServer((req, resp) => {
