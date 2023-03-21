@@ -13,7 +13,7 @@ const app = http.createServer((req, resp) => {
   if (req.url === '/students') {
     fs.readFile('database.csv', 'utf-8', (error, data) => {
       if (error) {
-        resp.end('');
+        resp.end('This is the list of our students');
       } else {
         let students = data.split('\n');
         students = students.slice(1, students.length - 1);
