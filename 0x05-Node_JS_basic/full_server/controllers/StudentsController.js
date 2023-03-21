@@ -1,9 +1,9 @@
 import readDatabase from '../utils';
 
 /**
- * Student controller class
+ * Students controller class
  */
-export default class StudentController {
+export default class StudentsController {
   /**
    * Queries db for student data and sets it on response object.
    * @param {*} request   - request object.
