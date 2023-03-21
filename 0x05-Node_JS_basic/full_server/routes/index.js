@@ -5,7 +5,7 @@ import StudentsController from '../controllers/StudentsController';
 const router = express.Router();
 
 router.get('/', AppController.getHomepage);
-router.get('/students', StudentsController.getAllStudent);
-router.get('/students/:major', StudentsController.getAllStudentByMajor);
+router.get('/students', StudentsController.getAllStudents);
+router.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
 export default router;

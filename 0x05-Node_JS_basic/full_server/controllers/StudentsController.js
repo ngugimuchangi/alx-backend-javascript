@@ -9,7 +9,7 @@ export default class StudentsController {
    * @param {*} request   - request object.
    * @param {*} response  - response object.
    */
-  static getAllStudent(request, response) {
+  static getAllStudents(request, response) {
     const body = ['This is the list of our students'];
     readDatabase(process.argv[2] === undefined ? '' : process.argv[2])
       .then((courseInfo) => {
@@ -35,7 +35,7 @@ export default class StudentsController {
    * @param {*} request  - request object
    * @param {*} response - response object.
    */
-  static getAllStudentByMajor(request, response) {
+  static getAllStudentsByMajor(request, response) {
     const { major } = request.params;
     if (major !== 'CS' && major !== 'SWE') {
       response.statusCode = 500;
