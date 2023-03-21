@@ -11,7 +11,7 @@ export default function readDatabase(db) {
   return new Promise((resolve, reject) => {
     readFile(db, 'utf-8', (error, data) => {
       if (error) {
-        reject(error);
+        reject(new Error('Cannot load the database'));
       } else {
         const courseInfo = {};
         let students = data.split('\n');
