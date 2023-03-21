@@ -1,5 +1,11 @@
+/**
+ * HTTP sever that handles / and /students
+ * routes
+ */
 const http = require('http');
 const fs = require('fs');
+
+const db = process.argv[2] === undefined ? '' : process.argv[2];
 
 const host = '127.0.0.1';
 const port = 1245;
@@ -11,10 +17,9 @@ const app = http.createServer((req, resp) => {
     resp.end('Hello Holberton School!');
   }
   if (req.url === '/students') {
-    fs.readFile('database.csv', 'utf-8', (error, data) => {
-      if (error) {
-        resp.end('This is the list of our students');
-      } else {
+    const body = ['This is the list of our students'];
+    fs.readFile(db, 'utf-8', (error, data) => {
+      if (!error) {
         let students = data.split('\n');
         students = students.slice(1, students.length - 1);
         const courses = new Map();
@@ -33,12 +38,12 @@ const app = http.createServer((req, resp) => {
         });
 
         // Organize data in an array
-        const body = ['This is the list of our students', `Number of students: ${students.length}`];
+        body.push(`Number of students: ${students.length}`);
         courses.forEach((courseData, course) => {
           body.push(`Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`);
         });
-        resp.end(body.join('\n'));
       }
+      resp.end(body.join('\n'));
     });
   }
 });
