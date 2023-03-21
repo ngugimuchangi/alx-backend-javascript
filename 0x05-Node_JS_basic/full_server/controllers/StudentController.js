@@ -10,9 +10,8 @@ export default class StudentController {
    * @param {*} response  - response object.
    */
   static getAllStudent(request, response) {
-    response.setHeader('Content-Type', 'text/plain');
     const body = ['This is the list of our students'];
-    readDatabase('database.csv')
+    readDatabase(process.argv[2] === undefined ? '' : process.argv[2])
       .then((courseInfo) => {
         for (const course in courseInfo) {
           if (Array.isArray(courseInfo[course])) {
@@ -37,13 +36,12 @@ export default class StudentController {
    * @param {*} response - response object.
    */
   static getAllStudentByMajor(request, response) {
-    response.setHeader('Content-Type', 'text/plain');
     const { major } = request.params;
     if (major !== 'CS' && major !== 'SWE') {
       response.statusCode = 500;
       response.send('Major parameter must be CS or SWE');
     } else {
-      readDatabase('database.csv')
+      readDatabase(process.argv[2] === undefined ? '' : process.argv[2])
         .then((courseInfo) => {
           response.statusCode = 200;
           response.send(`List: ${courseInfo[major].join(', ')}`);

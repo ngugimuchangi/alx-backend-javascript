@@ -9,3 +9,5 @@ app.use('/', router);
 app.listen(port, host, () => {
   console.log(`Server is live, running at http://${host}:${port}`);
 });
+
+export default app;
