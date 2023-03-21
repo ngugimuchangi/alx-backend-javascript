@@ -8,7 +8,9 @@ const fs = require('fs');
 function countStudents(dbPath) {
   return new Promise((resolve, reject) => {
     fs.readFile(dbPath, 'utf-8', (error, data) => {
-      if (!error) {
+      if (error) {
+        reject(Error('Cannot load the database'));
+      } else {
         let students = data.split('\n');
         students = students.slice(1, students.length - 1);
         const courses = new Map();
@@ -18,22 +20,17 @@ function countStudents(dbPath) {
           const studentData = student.split(',');
           const firstName = studentData[0];
           const field = studentData[3];
-          if (courses.has(field)) {
-            courses.get(field).students.push(firstName);
-            courses.get(field).count += 1;
-          } else {
-            courses.set(field, { students: [firstName], count: 1 });
-          }
+          if (courses.has(field)) courses.get(field).push(firstName);
+          else courses.set(field, [firstName]);
         });
 
         // Display information from map
         console.log(`Number of students: ${students.length}`);
-        courses.forEach((courseData, course) => {
-          console.log(`Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`);
+        courses.forEach((courseStudents, course) => {
+          console.log(`Number of students in ${course}: ${courseStudents.length}. List: ${courseStudents.join(', ')}`);
         });
         resolve();
       }
-      reject(Error('Cannot load the database'));
     });
   });
 }
