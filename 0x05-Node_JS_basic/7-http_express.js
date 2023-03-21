@@ -42,7 +42,7 @@ app.get('/students', (req, res) => {
       courses.forEach((courseData, course) => {
         body.push(`Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`);
       });
-      res.send(body.join('<br>'));
+      res.send(body.join('\n'));
     }
   });
 });
