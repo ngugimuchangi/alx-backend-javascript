@@ -17,12 +17,12 @@ app.get('/students', (req, res) => {
   fs.readFile(db, 'utf-8', (error, data) => {
     const body = ['This is the list of our students'];
     if (error) {
-      body.push('Cannot load the database')
+      body.push('Cannot load the database');
       res.send(body.join('\n'));
     } else {
+      const courses = new Map();
       let students = data.split('\n');
       students = students.slice(1, students.length - 1);
-      const courses = new Map();
 
       // Parse CSV data creating a map of courseData objects.
       students.forEach((student) => {
