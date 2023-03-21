@@ -13,10 +13,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  const body = ['This is the list of our students'];
+  let body = '';
   const db = process.argv[2] === undefined ? '' : process.argv[2];
   fs.readFile(db, 'utf-8', (error, data) => {
-    if (!error) {
+    if (error) {
+      res.send();
+    } else {
+      body = ['This is the list of our students'];
       let students = data.split('\n');
       students = students.slice(1, students.length - 1);
       const courses = new Map();
@@ -39,8 +42,8 @@ app.get('/students', (req, res) => {
       courses.forEach((courseData, course) => {
         body.push(`Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`);
       });
+      res.send(body.join('<br>'));
     }
-    res.send(body.join('<br>'));
   });
 });
 
