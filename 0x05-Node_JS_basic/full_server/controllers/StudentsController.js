@@ -24,8 +24,7 @@ export default class StudentsController {
       })
       .catch((error) => {
         response.statusCode = 500;
-        body.push(error.message);
-        response.send(body.join('\n'));
+        response.send(error.message);
       });
   }
 
