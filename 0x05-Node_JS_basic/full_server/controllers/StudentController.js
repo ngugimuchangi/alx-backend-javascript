@@ -22,9 +22,9 @@ export default class StudentController {
         response.statusCode = 200;
         response.send(body.join('\n'));
       })
-      .catch((error) => {
+      .catch(() => {
         response.statusCode = 500;
-        body.push(error.message);
+        body.push('Cannot load the database');
         response.send(body.join('\n'));
       });
   }
@@ -46,9 +46,9 @@ export default class StudentController {
           response.statusCode = 200;
           response.send(`List: ${courseInfo[major].join(', ')}`);
         })
-        .catch((error) => {
+        .catch(() => {
           response.statusCode = 500;
-          response.send(error.message);
+          response.send('Cannot load the database');
         });
     }
   }
