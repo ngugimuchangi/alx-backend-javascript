@@ -11,9 +11,9 @@ function countStudents(dbPath) {
       if (error) {
         reject(Error('Cannot load the database'));
       } else {
+        const courses = new Map();
         let students = data.split('\n');
         students = students.slice(1, students.length - 1);
-        const courses = new Map();
 
         // Parse CSV data creating a map of courseData objects.
         students.forEach((student) => {
