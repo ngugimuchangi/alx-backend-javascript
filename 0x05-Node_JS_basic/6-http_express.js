@@ -14,3 +14,5 @@ app.get('/', (req, res) => {
 app.listen(port, host, () => {
   console.log(`Server is live, running at http://${host}:${port}`);
 });
+
+module.exports = app;
