@@ -9,6 +9,4 @@ const app = http.createServer((req, resp) => {
   resp.end('Hello Holberton School!');
 });
 
-app.listen(port, host, () => {
-  console.log(`Server is live, running at http://${host}:${port}`);
-});
+app.listen(port, host);
