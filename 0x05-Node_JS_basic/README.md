@@ -42,7 +42,7 @@
         - `GET /students`: returns list of students in every major.
     - File: [7-http_express.js](7-http_express.js)
 
-8. `Express` server.
+8. Minimal `Express` server.
     - Routes:
         - `GET /`: home page.
         - `GET /students`: returns list of students in every major.
