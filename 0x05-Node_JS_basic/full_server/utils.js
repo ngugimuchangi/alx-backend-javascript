@@ -15,7 +15,7 @@ export default function readDatabase(db) {
       } else {
         const courseInfo = {};
         let students = data.split('\n');
-        students = students.splice(1, students.length - 2);
+        students = students.slice(1, students.length - 1);
         students.forEach((student) => {
           const studentData = student.split(',');
           const field = studentData[3];
