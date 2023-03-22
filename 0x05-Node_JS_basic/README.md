@@ -17,7 +17,7 @@
 
 2. Function countStudents that reads **[database.csv](database.csv)** synchronously and prints out the data.
     - File: [2-read_file.js](2-read_file.js)
-3. Function countStudents that reads [database.csv](database.csv) asynchronously and prints out the data.
+3. Function countStudents that reads **[database.csv](database.csv)** asynchronously and prints out the data.
     - [3-read_file_async.js](3-read_file_async.js)
 
 4. Minimal HTTP server using Nodejs `http` module.
@@ -48,7 +48,7 @@
         - `GET /students`: returns list of students in every major.
         - `GET /students/:major`: returns list of students in given major. (major options: `CS` and `SWE`).
     - Files:
-        - [utils.js](full_server/utils.js): retrieves data from file database.
+        - [utils.js](full_server/utils.js): retrieves data from **[database.csv](database.csv)**.
         - [AppController.js](full_server/controllers/AppController.js): `/` route controller.
         - [StudentsController.js](full_server/controllers/StudentsController.js): `/students` and `/students/:major` routes controller.
         - [index.js](full_server/routes/index.js): router module.
