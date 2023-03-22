@@ -3,7 +3,7 @@
  */
 export default class AppController {
   /**
-   *
+   * Handles requests for `/` route
    * @param {*} request   - request object
    * @param {*} response  - response object
    */
