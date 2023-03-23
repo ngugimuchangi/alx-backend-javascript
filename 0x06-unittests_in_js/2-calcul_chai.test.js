@@ -4,7 +4,7 @@
 const { expect } = require('chai');
 const calculateNumber = require('./2-calcul_chai');
 
-describe('calculateNumber', function() {
+describe('calculateNumber chai test suite', function() {
   describe('#SUM operation', function() {
     it('should return the sum of its rounded arguments', function() {
       expect(calculateNumber('SUM', 1, 3)).to.equal(4);

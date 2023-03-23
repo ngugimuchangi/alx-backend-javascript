@@ -4,7 +4,7 @@
 const assert = require('assert');
 const calculateNumber = require('./1-calcul');
 
-describe('calculateNumber', function() {
+describe('calculateNumber nodejs assertion test suite', function() {
   describe('#SUM operation', function() {
     it('should return the sum of its rounded arguments', function() {
       assert.equal(calculateNumber('SUM', 1, 3), 4);
