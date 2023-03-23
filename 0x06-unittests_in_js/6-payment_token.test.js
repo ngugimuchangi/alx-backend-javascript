@@ -6,16 +6,14 @@ const getPaymentTokenFromAPI = require('./6-payment_token');
 
 describe('getPaymentTokenFromAPI', function() {
   describe('#Async test', function() {
-    it('should get response from payment API', function(done) {
+    it('should get test response from payment API', function(done) {
+      expect(getPaymentTokenFromAPI(false)).to.equal(undefined);
       getPaymentTokenFromAPI(true)
         .then((res) => {
           expect(res).to.be.an('object')
             .with.property('data', 'Successful response from the API');
         });
       done();
-    });
-    it('should have no response from payment API', function() {
-      expect(getPaymentTokenFromAPI(false)).to.equal(undefined);
     });
   });
 });
