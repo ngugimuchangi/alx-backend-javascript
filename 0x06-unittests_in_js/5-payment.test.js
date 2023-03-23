@@ -7,28 +7,25 @@ const Utils = require('./utils');
 const sendPaymentRequestToAPi = require('./5-payment');
 
 describe('sendPaymentRequestToApi', function() {
-  afterEach(function() {
-    sinon.restore();
-  });
-
-  describe('#Utils.calculateNumber()', function() {
-    it('should be called with args from sendPaymentRequestToApi', function() {
-      const spy = sinon.spy(Utils, 'calculateNumber');
-      sendPaymentRequestToAPi(100, 20);
-      expect(spy.calledOnce).to.equal(true);
-      expect(spy.calledWith('SUM', 100, 20)).to.equal(true);
+  describe('#pys Utils.calculateNumber()', function() {
+    let spy;
+    beforeEach(function() {
+      spy = sinon.spy(console, 'log');
     });
-  });
+    afterEach(function() {
+      spy.restore();
+    });
 
-  describe('#stubbed Utils.calculateNumber()', function() {
-    it('should be return 10 when called by sendPaymentRequestToAPI', function() {
-      const stub = sinon.stub(Utils, 'calculateNumber');
-      const spy = sinon.spy(console, 'log');
-      stub.withArgs('SUM', 100, 20).returns(10);
+    it('should be return 120 when called by sendPaymentRequestToAPI', function() {
       sendPaymentRequestToAPi(100, 20);
-      expect(stub.calledOnce).to.equal(true);
-      expect(stub.calledWith('SUM', 100, 20)).to.equal(true);
-      expect(spy.calledWith('The total is: 10')).to.equal(true);
+      expect(spy.calledWith('The total is: 120')).to.equal(true);
+      expect(spy.calledOnce).to.equal(true);
+    });
+
+    it('should be return 20 when called by sendPaymentRequestToAPI', function() {
+      sendPaymentRequestToAPi(10, 10);
+      expect(spy.calledWith('The total is: 20')).to.equal(true);
+      expect(spy.calledOnce).to.equal(true);
     });
   });
 });
