@@ -10,25 +10,41 @@
 
 ## Tasks
 0. Unittest with `mocha` test framework and node's `assertion` library.
-    - Files: [package.json](package.json), [0-calcul.js](0-calcul.js), [0-calcul.test.js](0-calcul.test.js)
+    - Files:
+        - [package.json](package.json)
+        - [0-calcul.js](0-calcul.js)
+        - [0-calcul.test.js](0-calcul.test.js)
 
 1. Combined `mocha` descriptions.
-    - Files: [1-calcul.js](1-calcul.js), [1-calcul.test.js](1-calcul.test.js)
+    - Files:
+        - [1-calcul.js](1-calcul.js)
+        - [1-calcul.test.js](1-calcul.test.js)
 
 2. Basic testing with `chai` assertion library.
-    - Files: [2-calcul_chai.js](2-calcul_chai.js), [2-calcul_chai.test.js](2-calcul_chai.test.js)
+    - Files:
+        - [2-calcul_chai.js](2-calcul_chai.js)
+        - [2-calcul_chai.test.js](2-calcul_chai.test.js)
 
 3. Testing with `sinon` spies.
-    - Files: [utils.js](utils.js), [3-payment.js](3-payment.js), [3-payment.test.js](3-payment.test.js)
+    - Files:
+        - [utils.js](utils.js)
+        - [3-payment.js](3-payment.js)
+        - [3-payment.test.js](3-payment.test.js)
 
 4. Testing with `sinon` stubs.
-    - Files: [4-payment.js](4-payment.js), [4-payment.test.js](4-payment.test.js)
+    - Files:
+        - [4-payment.js](4-payment.js)
+        - [4-payment.test.js](4-payment.test.js)
 
 5. Testing with `sinon` hooks.
-    - Files: [5-payment.js](5-payment.js), [5-payment.test.js](5-payment.test.js)
+    - Files:
+        - [5-payment.js](5-payment.js)
+        - [5-payment.test.js](5-payment.test.js)
 
 6. Testing asynchronous function and promises.
-    - Files: [6-payment_token.js](6-payment_token.js), [6-payment_token.test.js](6-payment_token.test.js)
+    - Files:
+        - [6-payment_token.js](6-payment_token.js)
+        - [6-payment_token.test.js](6-payment_token.test.js)
 
 7. Skipping tests in `mocha`.
     - Files: [7-skip.test.js](7-skip.test.js)
