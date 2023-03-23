@@ -8,7 +8,7 @@ const HOST = '127.0.0.1';
 const PORT = '7865';
 
 describe('Express app test suite', function() {
-  describe('#Home page', function() {
+  describe('/', function() {
     it('should return home page', function(done) {
       request.get(`http://${HOST}:${PORT}/`, (error, res, body) => {
         if (error) expect(res.statusCode).to.not.equal(200);
@@ -18,7 +18,7 @@ describe('Express app test suite', function() {
       });
     });
   });
-  describe('#User cart', function() {
+  describe('/cart', function() {
     it('should return cart page with cart id', function(done) {
       request.get(`http://${HOST}:${PORT}/cart/14`, (error, res, body) => {
         if (error) expect(res.statusCode).to.not.equal(200);
