@@ -4,7 +4,7 @@
   "description": "Unit tests project",
   "main": "",
   "scripts": {
-    "test": "mocha *.test.js"
+    "test": "mocha"
   },
   "keywords": [
     "unit tests"
