@@ -2,7 +2,6 @@
  * getPaymentTokenFromAPI test suite
  */
 const { expect } = require('chai');
-const sinon = require('sinon');
 const getPaymentTokenFromAPI = require('./6-payment_token');
 
 describe('getPaymentTokenFromAPI', function() {
@@ -14,6 +13,9 @@ describe('getPaymentTokenFromAPI', function() {
             .with.property('data', 'Successful response from the API');
         });
       done();
+    });
+    it('should have no response from payment API', function() {
+      expect(getPaymentTokenFromAPI(false)).to.equal(undefined);
     });
   });
 });
