@@ -8,7 +8,6 @@ describe('getPaymentTokenFromAPI', function() {
   describe('#Async test', function() {
     
     it('should test response from payment API', function(done) {
-      // expect(getPaymentTokenFromAPI(false)).to.equal(undefined);
       getPaymentTokenFromAPI(true)
         .then((res) => {
           expect(res).to.be.an('object')
