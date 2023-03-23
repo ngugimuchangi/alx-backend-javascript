@@ -1,5 +1,5 @@
 /**
- * 0-calculus.js calculateNumber test suite
+ * 0-calculus.js.calculateNumber test suite
  */
 const assert = require('assert');
 const calculateNumber = require('./0-calcul');

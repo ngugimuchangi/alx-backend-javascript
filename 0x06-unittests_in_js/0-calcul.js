@@ -1,8 +1,8 @@
 /**
- * Adds to numbers
+ * Adds two numbers
  * @param   {number}  a
  * @param   {number}  b
- * @returns {number}  -  The sum of a an b
+ * @returns {number}  -  The sum of a and b
  */
 function calculateNumber(a, b) {
   const numOne = Math.round(a);
