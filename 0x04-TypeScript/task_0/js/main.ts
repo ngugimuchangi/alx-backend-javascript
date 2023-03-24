@@ -19,7 +19,7 @@ const studentTwo: Student = {
 }
 const students: Student[] = [studentOne, studentTwo];
 const table = document.createElement('table');
-table.style.border = '1px solid black'
+table.style.border = '1px solid black';
 
 // Add headers
 const tableHeader = document.createElement('tr');
