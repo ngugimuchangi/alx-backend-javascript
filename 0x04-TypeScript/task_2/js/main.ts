@@ -10,7 +10,7 @@ interface TeacherInterface {
     workTeacherTasks(): string;
 }
 
-class Director implements DirectorInterface{
+export class Director implements DirectorInterface{
     workFromHome(): string {
         return 'Working from home';
     }
@@ -22,7 +22,7 @@ class Director implements DirectorInterface{
     }
 }
 
-class Teacher implements TeacherInterface{
+export class Teacher implements TeacherInterface{
     workFromHome(): string {
         return 'Cannot work from home';
     }
@@ -34,22 +34,22 @@ class Teacher implements TeacherInterface{
     }
 }
 
-function createEmployee(salary: string | number): DirectorInterface | TeacherInterface {
+export function createEmployee(salary: string | number): DirectorInterface | TeacherInterface {
     if (typeof salary === 'number' && salary < 500) return new Teacher();
     return new Director();
 }
 
-function isDirector(employee: Director | Teacher): boolean {
+export function isDirector(employee: Director | Teacher): boolean {
     return employee instanceof Director ? true : false;
 }
 
-function executeWork(employee: Director | Teacher): void {
+export function executeWork(employee: Director | Teacher): void {
     if (employee instanceof Director) employee.workDirectorTasks();
     else employee.workTeacherTasks();
 }
 
 type Subjects =  'Math' | 'History';
 
-function teachClass(todayClass: Subjects): string{
+export function teachClass(todayClass: Subjects): string{
     return todayClass === 'Math' ? 'Teaching Math' : 'Teaching History';
 }
